@@ -1,0 +1,204 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: sans-serif;
+}
+body{
+    background-image: url("./images/to-do-bg.jpeg");
+}
+.to_do_container{
+    background-color: rgb(0, 0, 27);
+    min-height: 85vh;
+    max-height: auto;
+    width: 65vw;
+    margin: 40px auto;
+    border-radius: 2rem;
+    box-shadow: 3px 3px 4px 2px black;
+    padding: 2rem 4rem;
+}
+.to_do_container .head{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    font-style: italic;
+}
+.to_do_container .tasks_input {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f4f4f4;
+    border-radius: 1.4rem;
+    margin: 1rem 0;
+}
+.to_do_container .tasks_input input{
+    all: unset;
+    padding: 0.8rem 2rem;
+    background: transparent;
+}
+.to_do_container .tasks_input button{
+    all: unset;
+    padding: 0.8rem 2rem;
+    border-radius: 1.4rem;
+    background-color: rgb(20, 118, 211);
+    color: #f4f4f4;
+    cursor: pointer;
+    transition: all 0.3s;
+
+    &:hover{
+        background-color: rgb(54, 132, 204);
+    }
+}
+#clear{
+    all: unset;
+    color: #b3b3b3;
+    font-size: 0.9rem;
+    margin: 0 1rem;
+    cursor: pointer;
+    transition: color 0.5s ease;
+
+    &:hover{
+        color: yellow;
+    }
+}
+#clear i{
+    margin-right: 0.5rem;
+}
+.to_do_container #tasks_lists{
+    list-style-type: none;
+    margin: 1rem 0;
+}
+.to_do_container #tasks_lists li{
+    color: rgb(0, 0, 27);
+    margin-bottom: 1rem;
+    background-color: #b3c2c9;
+    border-radius: 1.4rem;
+    padding: 0.8rem 3rem;
+    position: relative;
+    cursor: pointer;
+}
+.to_do_container #tasks_lists li::before{
+    content: ' ';
+    position: absolute;
+    height: 1rem;
+    width: 1rem;
+    border-radius: 50%;
+    border: 1px solid rgb(0, 0, 27);
+    left: 1rem;
+}
+.to_do_container #tasks_lists .completed{
+    color: rgb(0, 0, 27);
+    text-decoration: line-through;
+}
+.to_do_container #tasks_lists .completed::before{
+    background-color: yellow;
+}
+.to_do_container #tasks_lists li span{
+    position: absolute;
+    right: 1rem;
+    top: 0.2rem;
+    height: 2rem;
+    width: 2rem;
+    font-size: 1.5rem;
+    color: rgb(0, 0, 27);
+    line-height: 2rem;
+    text-align: center;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.to_do_container #tasks_lists li span:hover{
+    background-color: #ededff;
+}
+
+.to_do_container #tasks_lists li i{
+    position: absolute;
+    right: 3rem;
+    top: 0.2rem;
+    height: 2rem;
+    width: 2rem;
+    font-size: 1rem;
+    color: rgb(0, 0, 27);
+    line-height: 2rem;
+    text-align: center;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.to_do_container #tasks_lists li i:hover{
+    background-color: #ededff;
+}
+
+.to_do_container #tasks_lists li input{
+    all: unset;
+    width: 85%;
+}
+
+
+@media (max-width: 800px){
+    .to_do_container{
+        min-height: 85vh;
+        max-height: auto;
+        width: 85vw;
+        margin: 20px auto;
+        border-radius: 2rem;
+        box-shadow: 3px 3px 4px 2px black;
+        padding: 2rem 4rem;
+    }
+    .to_do_container #tasks_lists li input{
+        width: 50%;
+    }
+}
+
+@media (max-width: 600px){
+    .to_do_container{
+        min-height: 85vh;
+        max-height: auto;
+        width: 95vw;
+        margin: 10px auto;
+        border-radius: 1rem;
+        box-shadow: 3px 3px 4px 2px black;
+        padding: 1rem 2rem;
+    }
+    .to_do_container #tasks_lists li input{
+        width: 30%;
+    }
+}
+
+@media (max-width: 425px){
+    .to_do_container .tasks_input {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background: transparent;
+        border-radius: 1.4rem;
+        margin: 1rem 0;
+    }
+    .to_do_container .tasks_input input {
+        margin: 1rem 0;
+        padding: 0.5rem 2rem;
+        background: aliceblue;
+        border-radius: 1rem;
+        width: 80%;
+    }
+    .to_do_container #tasks_lists li{
+        padding: 0.5rem 4rem 0.5rem 3rem;
+    }
+    .to_do_container .tasks_input button{
+        all: unset;
+        padding: 0.5rem 2rem;
+        border-radius: 1rem;
+        background-color: rgb(20, 118, 211);
+        color: #f4f4f4;
+        cursor: pointer;
+        transition: all 0.3s;
+    
+        &:hover{
+            background-color: rgb(54, 132, 204);
+        }
+    }
+}

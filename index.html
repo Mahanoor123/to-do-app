@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="./style.css">
+    <title>My DoLista app</title>
+</head>
+<body>
+    <div class="to_do_container">
+        <div class="head">
+            <h3>MY DoLista</h3>
+            <img src="./images/todo.jpeg" width="40rem">
+        </div>
+
+
+       <!-- User Task Input -->
+
+
+        <div class="tasks_input">
+            <input type="text" id="input_field" placeholder="Enter your tasks here">
+            <button onclick="addTask()">+ Add</button>
+        </div>
+
+
+       <!--  Clear All Button -->
+
+
+        <button id="clear" onclick="clearAll()"><i class="fa-solid fa-trash"></i>Clear all</button>
+
+
+        <!--  List Container -->
+
+            <ul id="tasks_lists"> </ul>
+
+
+    </div>
+
+    <h3>Developed by: Mahanoor khan</h3>
+    
+    <script src="./script.js"></script>
+</body>
+</html>
